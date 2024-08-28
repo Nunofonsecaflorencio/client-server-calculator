@@ -11,7 +11,7 @@ class CalculatorGUI:
         
         ##-----WINDOW AND LAYOUT---------------------------------##
         self.layout: list = [
-            [sg.Text('PyDataMath-II', size=(50,1), justification='right', background_color="#272533", 
+            [sg.Text('Fonseca | Simão Jr.', size=(50,1), justification='right', background_color="#272533", 
                 text_color='white', font=('Franklin Gothic Book', 14, 'bold'))],
             [sg.Text('0.00', size=(18,1), justification='right', background_color='black', text_color='red', 
                 font=('Digital-7',48), relief='sunken', key="_DISPLAY_")],
@@ -22,7 +22,7 @@ class CalculatorGUI:
             [sg.Button('0',**bw), sg.Button('.',**bw), sg.Button('=',**bo, bind_return_key=True)]
         ]
 
-        self.window: object = sg.Window('PyDataMath-II', layout=self.layout, background_color="#272533", size=(580, 660), return_keyboard_events=True)
+        self.window: object = sg.Window('Client-Server Calculator', layout=self.layout, background_color="#272533", size=(580, 660), return_keyboard_events=True)
 
         ##----CALCULATOR FUNCTIONS-------------------------------##
         self.var: dict = {'front':[], 'back':[], 'decimal':False, 'x_val':0.0, 'y_val':0.0, 'result':0.0, 'operator':''}
