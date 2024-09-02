@@ -1,5 +1,5 @@
 import socket
-
+import sys
 
 def start_server(host, port):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -53,4 +53,8 @@ def send_request(expression, client_socket):
 
 
 if __name__ == '__main__':
-    start_server('localhost', 5000)
+    if len(sys.argv) > 1:
+        # python main.py [port]
+        start_server('localhost', int(sys.argv[1]))
+    else:
+        start_server('localhost', 5000)
