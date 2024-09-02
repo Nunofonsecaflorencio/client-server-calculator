@@ -54,7 +54,7 @@ def send_request(expression, client_socket):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        # python main.py [port]
-        start_server('localhost', int(sys.argv[1]))
+        # python main.py [ip] [port]
+        start_server(sys.argv[1], int(sys.argv[2]))
     else:
         start_server('localhost', 5000)
